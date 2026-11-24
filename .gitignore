@@ -1,0 +1,39 @@
+.venv/
+__pycache__/
+.vscode/
+catboost_info/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ruff_cache/
+
+# Local OS / editor noise
+Thumbs.db
+.DS_Store
+
+# Generated reports / outputs
+skillscout_ranking_*.csv
+skillscout_summary_*.csv
+skillscout_matching_report.csv
+*.log
+0.26.0'
+
+# Large raw datasets, private resumes, and generated local outputs
+data/raw/
+data/private_resumes/
+data/outputs/
+
+# Sample resumes and downloaded examples
+*_ds.pdf
+rizwan_ds (1).pdf
+rizwan_ds.pdf
+
+# Research / backup artifacts not needed for a clean app repo
+h/
+fine-tuned-bert/
+bert-fine-tuned-triplet/
+models/*_opt.*
+
+# Optional notebook checkpoints
+.ipynb_checkpoints/
