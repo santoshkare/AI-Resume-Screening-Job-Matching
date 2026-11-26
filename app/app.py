@@ -380,6 +380,187 @@ st.markdown("""
         border-radius: 9999px;
         font-size: 0.75rem;
         font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    /* Enhanced Tab Navigation */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 8px;
+        background-color: rgba(17, 24, 39, 0.85);
+        border: 1px solid var(--border-glass);
+        padding: 6px;
+        border-radius: 14px;
+        backdrop-filter: blur(16px);
+        margin-bottom: 1.5rem;
+    }
+    .stTabs [data-baseweb="tab"] {
+        height: 44px;
+        padding: 0 1.25rem;
+        background-color: transparent;
+        border-radius: 10px;
+        color: var(--text-secondary);
+        font-weight: 600;
+        font-size: 0.92rem;
+        border: none;
+        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .stTabs [data-baseweb="tab"]:hover {
+        color: #F8FAFC;
+        background: rgba(255, 255, 255, 0.05);
+    }
+    .stTabs [aria-selected="true"] {
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(139, 92, 246, 0.25) 100%) !important;
+        color: #93C5FD !important;
+        border: 1px solid rgba(59, 130, 246, 0.45) !important;
+        box-shadow: 0 4px 18px rgba(59, 130, 246, 0.2);
+    }
+    .stTabs [data-baseweb="tab-highlight"] {
+        display: none;
+    }
+
+    /* Modern Expanders */
+    [data-testid="stExpander"] {
+        background: rgba(17, 24, 39, 0.6) !important;
+        border: 1px solid var(--border-glass) !important;
+        border-radius: 14px !important;
+        overflow: hidden;
+        margin-top: 0.6rem;
+        margin-bottom: 1.2rem;
+        backdrop-filter: blur(12px);
+        transition: all 0.25s ease;
+    }
+    [data-testid="stExpander"]:hover {
+        border-color: rgba(255, 255, 255, 0.18) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+    [data-testid="stExpander"] summary {
+        padding: 0.9rem 1.2rem !important;
+        font-weight: 600 !important;
+        font-size: 0.95rem !important;
+        color: #F1F5F9 !important;
+    }
+
+    /* Top Rank Ambient Glows */
+    .top-rank-1 {
+        border: 1px solid rgba(245, 158, 11, 0.45) !important;
+        box-shadow: 0 10px 35px -5px rgba(245, 158, 11, 0.2) !important;
+        position: relative;
+    }
+    .top-rank-1::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #F59E0B, #FBBF24, #F59E0B);
+        border-radius: 16px 16px 0 0;
+    }
+    .top-rank-2 {
+        border: 1px solid rgba(59, 130, 246, 0.45) !important;
+        box-shadow: 0 10px 35px -5px rgba(59, 130, 246, 0.2) !important;
+        position: relative;
+    }
+    .top-rank-2::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #3B82F6, #60A5FA, #3B82F6);
+        border-radius: 16px 16px 0 0;
+    }
+    .top-rank-3 {
+        border: 1px solid rgba(139, 92, 246, 0.45) !important;
+        box-shadow: 0 10px 35px -5px rgba(139, 92, 246, 0.2) !important;
+        position: relative;
+    }
+    .top-rank-3::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #8B5CF6, #A78BFA, #8B5CF6);
+        border-radius: 16px 16px 0 0;
+    }
+
+    /* Candidate Avatar */
+    .candidate-avatar {
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(139, 92, 246, 0.25) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 0.95rem;
+        color: #F8FAFC;
+        letter-spacing: 0.05em;
+        flex-shrink: 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Sleek Inputs */
+    .stTextArea textarea {
+        background: rgba(17, 24, 39, 0.75) !important;
+        border: 1px solid var(--border-glass) !important;
+        border-radius: 12px !important;
+        color: #F8FAFC !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 0.93rem !important;
+        transition: all 0.25s ease !important;
+    }
+    .stTextArea textarea:focus {
+        border-color: var(--accent-blue) !important;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+        background: rgba(17, 24, 39, 0.9) !important;
+    }
+
+    /* Sleek Primary Button */
+    .stButton > button[kind="primary"] {
+        background: linear-gradient(135deg, #2563EB 0%, #7C3AED 50%, #EC4899 100%) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 12px !important;
+        padding: 0.7rem 2.2rem !important;
+        font-weight: 700 !important;
+        font-size: 1.02rem !important;
+        letter-spacing: 0.02em !important;
+        box-shadow: 0 4px 22px rgba(124, 58, 237, 0.4) !important;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .stButton > button[kind="primary"]:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 32px rgba(124, 58, 237, 0.55) !important;
+        opacity: 0.96 !important;
+    }
+
+    /* Preset Secondary Buttons */
+    .stButton > button[kind="secondary"] {
+        background: rgba(255, 255, 255, 0.04) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        color: var(--text-primary) !important;
+        border-radius: 10px !important;
+        font-size: 0.88rem !important;
+        font-weight: 600 !important;
+        transition: all 0.2s ease !important;
+    }
+    .stButton > button[kind="secondary"]:hover {
+        border-color: var(--accent-blue) !important;
+        background: rgba(59, 130, 246, 0.12) !important;
+        color: #93C5FD !important;
+        transform: translateY(-1px) !important;
+    }
+
+    /* File Uploader Dropzone */
+    [data-testid="stFileUploaderDropzone"] {
+        background: rgba(17, 24, 39, 0.65) !important;
+        border: 2px dashed rgba(255, 255, 255, 0.14) !important;
+        border-radius: 14px !important;
+        transition: all 0.25s ease !important;
+    }
+    [data-testid="stFileUploaderDropzone"]:hover {
+        border-color: var(--accent-purple) !important;
+        background: rgba(139, 92, 246, 0.08) !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -844,48 +1025,59 @@ if results:
             score_color = get_score_color(score)
             score_badge = get_score_badge_class(score)
             score_lbl = get_score_label(score)
+            rank_glow = "top-rank-1" if rank == 1 else "top-rank-2" if rank == 2 else "top-rank-3" if rank == 3 else ""
+            clean_name = display_name.replace(".pdf", "").replace("_", " ").title()
+            initials = "".join([part[0].upper() for part in re.split(r'[\s_\-.]+', display_name) if part and part[0].isalnum()][:2]) or "CD"
 
             with st.container():
                 st.markdown(f"""
-                <div class="candidate-card">
+                <div class="candidate-card {rank_glow}">
                     <div class="candidate-header">
                         <div class="candidate-name-box">
-                            <span class="candidate-rank-badge">{medal}#{rank}</span>
+                            <div class="candidate-avatar">{initials}</div>
                             <div>
-                                <div class="candidate-title">{display_name}</div>
-                                <span style="font-size: 0.8rem; color: #94A3B8;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span class="candidate-rank-badge">{medal}#{rank}</span>
+                                    <span class="candidate-title">{clean_name}</span>
+                                </div>
+                                <div style="font-size: 0.8rem; color: #94A3B8; margin-top: 0.25rem;">
                                     {fb.get('verdict', '')} • {fb.get('eligibility_label', '')}
-                                </span>
+                                </div>
                             </div>
                         </div>
                         <div class="score-circle-box">
                             <div class="score-big-num" style="color: {score_color};">{score:.1f}</div>
                             <span class="score-pill {score_badge}">{score_lbl}</span>
+                            <div>
+                                <div style="background: rgba(255,255,255,0.08); border-radius: 9999px; height: 5px; width: 85px; margin-top: 5px; display: inline-block; overflow: hidden;">
+                                    <div style="background: {score_color}; height: 100%; width: {min(100, int(score * 10))}%; border-radius: 9999px;"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
                         <div class="stat-pill">
-                            <span class="stat-pill-lbl">Experience</span>
+                            <span class="stat-pill-lbl">⏳ Experience</span>
                             <span class="stat-pill-val">{feats.get('experience_years', 0):.1f} yrs</span>
                         </div>
                         <div class="stat-pill">
-                            <span class="stat-pill-lbl">Skills Found</span>
+                            <span class="stat-pill-lbl">⚡ Skills Found</span>
                             <span class="stat-pill-val">{feats.get('num_skills', 0)}</span>
                         </div>
                         <div class="stat-pill">
-                            <span class="stat-pill-lbl">Skill Match %</span>
+                            <span class="stat-pill-lbl">🎯 Skill Match</span>
                             <span class="stat-pill-val" style="color: #34D399;">{fb.get('skill_match_pct', 0):.0f}%</span>
                         </div>
                         <div class="stat-pill">
-                            <span class="stat-pill-lbl">Requirement Fit</span>
+                            <span class="stat-pill-lbl">📊 Req Fit</span>
                             <span class="stat-pill-val" style="color: #60A5FA;">{fb.get('requirement_fit_pct', 0):.0f}%</span>
                         </div>
                         <div class="stat-pill">
-                            <span class="stat-pill-lbl">Semantic BERT</span>
+                            <span class="stat-pill-lbl">🧠 Semantic BERT</span>
                             <span class="stat-pill-val">{feats.get('bert_sim_score', 0):.1f} / 10</span>
                         </div>
                         <div class="stat-pill">
-                            <span class="stat-pill-lbl">Confidence</span>
+                            <span class="stat-pill-lbl">🛡️ Confidence</span>
                             <span class="stat-pill-val">{fb.get('ranking_confidence', 0):.0f}%</span>
                         </div>
                     </div>
