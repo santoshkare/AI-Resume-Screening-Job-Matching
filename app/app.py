@@ -5,6 +5,10 @@ Enterprise-grade Streamlit UI with Plotly Visualizations, Blind Screening,
 Stacked Ensemble Explainability, and AI Recruiter Copilot.
 """
 
+import os
+os.environ["USE_TF"] = "0"
+os.environ["USE_TORCH"] = "1"
+
 import streamlit as st
 import pandas as pd
 import numpy as np

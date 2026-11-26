@@ -6,6 +6,8 @@ ensemble, and generates ranked results with actionable feedback.
 """
 
 import os
+os.environ["USE_TF"] = "0"
+os.environ["USE_TORCH"] = "1"
 import re
 import joblib
 import pdfplumber
